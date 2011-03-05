@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>sticky.js</title>
+
+	<link type="text/css" media="screen" href="rdoc.css" rel="stylesheet" />
+	<!--
+	<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/thickbox-compressed.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/quicksearch.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/darkfish.js" type="text/javascript" charset="utf-8"></script>
+	-->
+    <script src="lib/prototype.js" type="text/javascript"></script>
+    <script src="lib/scriptaculous.js?load=builder,effects,dragdrop" type="text/javascript"></script>
+
+    <link href="sticky/sticky.css" rel="stylesheet" type="text/css">
+    <script src="sticky/sticky.js" type="text/javascript"></script>
+    <script src="sticky/popupmenu.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+      (function() {
+        var sticky_colors = ['#FF8080', '#FFFF80', '#80FF80', '#80FFFF'];
+        var font_sizes    = ['20px', '16px', '12px'];
+
+        function bind_popup(sticky) {
+          var popup = new PopupMenu();
+
+          sticky_colors.each(function(color) {
+            popup.add('<div style=\"background-color:' + color + ';\">&nbsp;</div>', function() {
+              sticky.setColor(color);
+            });
+          });
+
+          font_sizes.each(function(size) {
+            popup.add('<div style=\"font-size:' + size + ';\">' + size + '</div>', function() {
+              sticky.setFontSize(size);
+            });
+          });
+
+          popup.addSeparator();
+          popup.add('Remove', function(target, e) { sticky.event = e; sticky.detach(); });
+          popup.addSeparator();
+          popup.add('Cancel', Prototype.emptyFunction);
+          popup.setSize(100, 0);
+          popup.bind(sticky);
+        }
+
+        var stickies = [];
+
+        window.attach_sticky = function(id, content) {
+          var top = (Math.floor(Math.random() * 200) + 100) + 'px';
+          var left = (Math.floor(Math.random() * 300) + 100) + 'px';
+          var bgcolor = sticky_colors[Math.floor(Math.random() * sticky_colors.length)];
+          var font_size = font_sizes[Math.floor(Math.random() * font_sizes.length)];
+
+          // top, left, bgcolor and font_size are omissible.
+          var sticky = new Sticky(id, content, top, left, bgcolor, font_size);
+          stickies.push(sticky);
+
+          var logger = function(sticky) {
+            //console.log(sticky);
+          }
+
+          sticky.onattach      = logger;
+          sticky.onmove        = logger;
+          sticky.onedit        = logger;
+          sticky.ondetach      = logger;
+          sticky.onsetcolor    = logger;
+          sticky.onsetfontsize = logger;
+
+          bind_popup(sticky);
+          sticky.attach();
+        }
+
+        window.clear_stickies = function() {
+          var sticky = stickies.shift();
+
+          while(sticky) {
+            sticky.detach();
+            sticky = stickies.shift();
+          }
+        }
+      })();
+    </script>
+</head>
+<body class="indexpage">
+
+	
+	<h1>sticky.js</h1>
+
+	
+	<div id="main">
+		
+<h2>Description</h2>
+<p>
+This is a library to make the tag paper with JavaScript.
+</p>
+<h2>Project Page</h2>
+<p>
+<a
+href="https://bitbucket.org/winebarrel/sticky.js/src">bitbucket.org/winebarrel/sticky.js/src</a>
+</p>
+<h2>Demo</h2>
+<p>
+<ul>
+<li><a id="create_link" href="javascript:void(0);">New sticky</a></li>
+<li><a id="clear_link" href="javascript:void(0);">Clear</a></li>
+</ul>
+</p>
+<script type="text/javascript">
+  (function() {
+    var n = 0;
+
+    function random_content() {
+      var contents = [
+        'Old Mother Goose,\nWhen she wanted to wander,\nWould ride through the air\nOn a very fine gander.',
+        'London Bridge is broken down,\nBroken down, broken down,\nLondon Bridge is broken down,\nMy fair lady.',
+        'Georgie Porgie, pudding and pie,\nKissed the girls and made them cry;\nWhen the boys came out to play,\nGeorgie Porgie ran away.'
+      ];
+
+      return contents[Math.floor(Math.random() * contents.length)];
+    }
+
+    $('create_link').observe('click', function(){
+      attach_sticky('sticky' + n, random_content());
+      n++;
+    });
+
+    $('clear_link').observe('click', function(){
+      clear_stickies();
+    });
+  })();
+</script>
+<h2>Example</h2>
+<pre>
+  &lt;html&gt;
+    &lt;head&gt;
+      &lt;script src=&quot;lib/prototype.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+      &lt;script src=&quot;lib/scriptaculous.js?load=builder,effects,dragdrop&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+  
+      &lt;link href=&quot;sticky/sticky.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;
+      &lt;script src=&quot;sticky/sticky.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+      &lt;script src=&quot;sticky/popupmenu.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+  
+      &lt;script type=&quot;text/javascript&quot;&gt;
+        (function() {
+          var sticky_colors = ['#FF8080', '#FFFF80', '#80FF80', '#80FFFF'];
+          var font_sizes    = ['20px', '16px', '12px'];
+  
+          function bind_popup(sticky) {
+            var popup = new PopupMenu();
+  
+            sticky_colors.each(function(color) {
+              popup.add('&lt;div style=\&quot;background-color:' + color + ';\&quot;&gt;&amp;nbsp;&lt;/div&gt;', function() {
+                sticky.setColor(color);
+              });
+            });
+  
+            font_sizes.each(function(size) {
+              popup.add('&lt;div style=\&quot;font-size:' + size + ';\&quot;&gt;' + size + '&lt;/div&gt;', function() {
+                sticky.setFontSize(size);
+              });
+            });
+  
+            popup.addSeparator();
+            popup.add('Remove', function(target, e) { sticky.event = e; sticky.detach(); });
+            popup.addSeparator();
+            popup.add('Cancel', Prototype.emptyFunction);
+            popup.setSize(100, 0);
+            popup.bind(sticky);
+          }
+  
+          window.attach_sticky = function(id, content) {
+            var top = (Math.floor(Math.random() * 200) + 100) + 'px';
+            var left = (Math.floor(Math.random() * 300) + 100) + 'px';
+            var bgcolor = sticky_colors[Math.floor(Math.random() * sticky_colors.length)];
+            var font_size = font_sizes[Math.floor(Math.random() * font_sizes.length)];
+  
+            // top, left, bgcolor and font_size are omissible.
+            var sticky = new Sticky(id, content, top, left, bgcolor, font_size);
+  
+            var logger = function(sticky) {
+              //console.log(sticky);
+            }
+  
+            sticky.onattach      = logger;
+            sticky.onmove        = logger;
+            sticky.onedit        = logger;
+            sticky.ondetach      = logger;
+            sticky.onsetcolor    = logger;
+            sticky.onsetfontsize = logger;
+  
+            bind_popup(sticky);
+            sticky.attach();
+          }
+        })();
+      &lt;/script&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+      &lt;a id=&quot;link&quot; href=&quot;javascript:void(0);&quot;&gt;New sticky&lt;/a&gt;
+  
+      &lt;script type=&quot;text/javascript&quot;&gt;
+        (function() {
+          var n = 0;
+  
+          function random_content() {
+            var contents = [
+              'Old Mother Goose,\nWhen she wanted to wander,\nWould ride through the air\nOn a very fine gander.',
+              'London Bridge is broken down,\nBroken down, broken down,\nLondon Bridge is broken down,\nMy fair lady.',
+              'Georgie Porgie, pudding and pie,\nKissed the girls and made them cry;\nWhen the boys came out to play,\nGeorgie Porgie ran away.'
+            ];
+  
+            return contents[Math.floor(Math.random() * contents.length)];
+          }
+  
+          $('link').observe('click', function(){
+            attach_sticky('sticky' + n, random_content());
+            n++;
+          });
+        })();
+      &lt;/script&gt;
+    &lt;/body&gt;
+  &lt;/html&gt;</pre>
+
+	</div>
+	
+
+	
+	
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+</body>
+</html>
