@@ -81,7 +81,7 @@
           var sticky = stickies.shift();
 
           while(sticky) {
-            sticky.detach();
+            try { sticky.detach(); } catch(e) {}
             sticky = stickies.shift();
           }
         }
