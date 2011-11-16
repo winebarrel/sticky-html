@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>Class: Murakumo::Cloud</title>
+
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>lib/srv/murakumo_cloud.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link"><a href="../Object.html">Object</a>
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-c-new">::new</a>
+    
+    <li><a href="#method-i-add_nodes">#add_nodes</a>
+    
+    <li><a href="#method-i-add_or_rplace_records">#add_or_rplace_records</a>
+    
+    <li><a href="#method-i-address_exist-3F">#address_exist?</a>
+    
+    <li><a href="#method-i-close">#close</a>
+    
+    <li><a href="#method-i-delete">#delete</a>
+    
+    <li><a href="#method-i-delete_by_names">#delete_by_names</a>
+    
+    <li><a href="#method-i-delete_nodes">#delete_nodes</a>
+    
+    <li><a href="#method-i-delete_records">#delete_records</a>
+    
+    <li><a href="#method-i-get_attr">#get_attr</a>
+    
+    <li><a href="#method-i-list_records">#list_records</a>
+    
+    <li><a href="#method-i-lookup_addresses">#lookup_addresses</a>
+    
+    <li><a href="#method-i-lookup_name">#lookup_name</a>
+    
+    <li><a href="#method-i-name_exist-3F">#name_exist?</a>
+    
+    <li><a href="#method-i-set_attr">#set_attr</a>
+    
+    <li><a href="#method-i-to_hash">#to_hash</a>
+    
+    <li><a href="#method-i-update">#update</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../README.html">README</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../Murakumo.html">Murakumo</a>
+  
+    <li><a href="../Murakumo/Cloud.html">Murakumo::Cloud</a>
+  
+    <li><a href="../Murakumo/HealthChecker.html">Murakumo::HealthChecker</a>
+  
+    <li><a href="../Murakumo/HealthCheckerContext.html">Murakumo::HealthCheckerContext</a>
+  
+    <li><a href="../Murakumo/Server.html">Murakumo::Server</a>
+  
+    <li><a href="../Object.html">Object</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class Murakumo::Cloud</h1>
+
+  <div id="description" class="description">
+    
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+    <!-- Attributes -->
+    <section id="attribute-method-details" class="method-section section">
+      <h3 class="section-header">Attributes</h3>
+
+      
+      <div id="attribute-i-address" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">address</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-db" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">db</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+      <div id="attribute-i-gossip" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">gossip</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        
+        
+        </div>
+      </div>
+      
+    </section><!-- attribute-method-details -->
+    
+
+    <!-- Methods -->
+    
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Class Methods</h3>
+
+    
+      <div id="method-c-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(options)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/srv/murakumo_cloud.rb, line 17</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">options</span>)
+  <span class="ruby-comment"># オプションはインスタンス変数に保存</span>
+  <span class="ruby-ivar">@options</span> = <span class="ruby-identifier">options</span>
+
+  <span class="ruby-comment"># リソースレコードからホストのアドレスとデータを取り出す</span>
+  <span class="ruby-identifier">host_data</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:host</span>]
+  <span class="ruby-ivar">@address</span> = <span class="ruby-identifier">host_data</span>.<span class="ruby-identifier">shift</span>
+  <span class="ruby-identifier">host_data</span>.<span class="ruby-identifier">concat</span> [<span class="ruby-constant">ORIGIN</span>, <span class="ruby-constant">ACTIVE</span>]
+  <span class="ruby-identifier">alias_datas</span> = <span class="ruby-identifier">options</span>[<span class="ruby-value">:aliases</span>].<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">r</span><span class="ruby-operator">|</span> <span class="ruby-identifier">r</span> <span class="ruby-operator">+</span> [<span class="ruby-constant">ACTIVE</span>] }
+
+  <span class="ruby-comment"># 名前は小文字に変換</span>
+  <span class="ruby-identifier">datas</span> = ([<span class="ruby-identifier">host_data</span>] <span class="ruby-operator">+</span> <span class="ruby-identifier">alias_datas</span>).<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">name</span>, <span class="ruby-identifier">ttl</span>, <span class="ruby-identifier">priority</span>, <span class="ruby-identifier">activity</span> = <span class="ruby-identifier">i</span>
+    <span class="ruby-identifier">name</span> = <span class="ruby-identifier">name</span>.<span class="ruby-identifier">downcase</span>
+    [<span class="ruby-identifier">name</span>, <span class="ruby-identifier">ttl</span>, <span class="ruby-identifier">priority</span>, <span class="ruby-identifier">activity</span>]
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># データベースを作成してレコードを更新</span>
+  <span class="ruby-identifier">create_database</span>
+  <span class="ruby-identifier">update</span>(<span class="ruby-ivar">@address</span>, <span class="ruby-identifier">datas</span>)
+
+  <span class="ruby-comment"># ゴシップオブジェクトを生成</span>
+  <span class="ruby-ivar">@gossip</span> = <span class="ruby-constant">RGossip2</span>.<span class="ruby-identifier">client</span>({
+    <span class="ruby-value">:initial_nodes</span>   =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:initial_nodes</span>],
+    <span class="ruby-value">:address</span>         =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@address</span>,
+    <span class="ruby-value">:data</span>            =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">datas</span>,
+    <span class="ruby-value">:auth_key</span>        =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:auth_key</span>],
+    <span class="ruby-value">:port</span>            =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:gossip_port</span>],
+    <span class="ruby-value">:node_lifetime</span>   =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:gossip_node_lifetime</span>],
+    <span class="ruby-value">:gossip_interval</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:gossip_send_interval</span>],
+    <span class="ruby-value">:receive_timeout</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:gossip_receive_timeout</span>],
+    <span class="ruby-value">:logger</span>          =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">options</span>[<span class="ruby-value">:logger</span>],
+  })
+
+  <span class="ruby-comment"># ノードの更新をフック</span>
+  <span class="ruby-ivar">@gossip</span>.<span class="ruby-identifier">context</span>.<span class="ruby-identifier">callback_handler</span> = <span class="ruby-identifier">lambda</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">act</span>, <span class="ruby-identifier">addr</span>, <span class="ruby-identifier">ts</span>, <span class="ruby-identifier">dt</span><span class="ruby-operator">|</span>
+    <span class="ruby-keyword">case</span> <span class="ruby-identifier">act</span>
+    <span class="ruby-keyword">when</span> <span class="ruby-value">:add</span>, <span class="ruby-value">:comeback</span>, <span class="ruby-value">:update</span>
+      <span class="ruby-identifier">update</span>(<span class="ruby-identifier">addr</span>, <span class="ruby-identifier">dt</span>)
+    <span class="ruby-keyword">when</span> <span class="ruby-value">:delete</span>
+      <span class="ruby-identifier">delete</span>(<span class="ruby-identifier">addr</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># ヘルスチェック</span>
+  <span class="ruby-ivar">@health_checkers</span> = {}
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">config_file</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">config_file</span>[<span class="ruby-string">'health-check'</span>]
+    <span class="ruby-identifier">health_check</span> = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">config_file</span>[<span class="ruby-string">'health-check'</span>]
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">health_check</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">Hash</span>)
+      <span class="ruby-identifier">health_check</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name</span>, <span class="ruby-identifier">conf</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">checker</span> = <span class="ruby-constant">HealthChecker</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">name</span>, <span class="ruby-keyword">self</span>, <span class="ruby-identifier">options</span>[<span class="ruby-value">:logger</span>], <span class="ruby-identifier">conf</span>)
+        <span class="ruby-ivar">@health_checkers</span>[<span class="ruby-identifier">name</span>] = <span class="ruby-identifier">checker</span>
+        <span class="ruby-identifier">checker</span>.<span class="ruby-identifier">start</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-identifier">options</span>[<span class="ruby-value">:logger</span>].<span class="ruby-identifier">warn</span>(<span class="ruby-string">'configuration of a health check is not right'</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+    </section><!-- public-class-method-details -->
+  
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-add_nodes" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">add_nodes</span><span
+            class="method-args">(nodes)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="add_nodes-source">
+            <pre><span class="ruby-comment"># File lib/srv/murakumo_cloud.rb, line 228</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">add_nodes</span>(<span class="ruby-identifier">nodes</span>)
+  <span class="ruby-identifier">errmsg</span> = <span class="ruby-keyword">nil</span>
+
+  <span class="ruby-identifier">nodes</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-ivar">@gossip</span>.<span class="ruby-identifier">add_node</span>(<span class="ruby-identifier">i</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> [<span class="ruby-operator">!</span><span class="ruby-identifier">errmsg</span>, <span class="ruby-identifier">errmsg</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- add_nodes-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- add_nodes-method -->
+
+    
+      <div id="method-i-add_or_rplace_records" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">add_or_rplace_records</span><span
+            class="method-args">(records)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="add_or_rplace_records-source">
+            <pre><span class="ruby-comment"># File lib/srv/murakumo_cloud.rb, line 150</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">add_or_rplace_records</span>(<span class="ruby-identifier">records</span>)
+  <span class="ruby-identifier">errmsg</span> = <span class="ruby-keyword">nil</span>
+
+  <span class="ruby-comment"># 名前は小文字に変換</span>
+  <span class="ruby-identifier">records</span> = <span class="ruby-identifier">records</span>.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">name</span>, <span class="ruby-identifier">ttl</span>, <span class="ruby-identifier">priority</span> = <span class="ruby-identifier">i</span>
+    <span class="ruby-identifier">name</span> = <span class="ruby-identifier">name</span>.<span class="ruby-identifier">downcase</span>
+    [<span class="ruby-identifier">name</span>, <span class="ruby-identifier">ttl</span>, <span class="ruby-identifier">priority</span>]
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-ivar">@gossip</span>.<span class="ruby-identifier">transaction</span> <span class="ruby-keyword">do</span>
+
+    <span class="ruby-comment"># 既存のホスト名は削除</span>
+    <span class="ruby-ivar">@gossip</span>.<span class="ruby-identifier">data</span>.<span class="ruby-identifier">reject!</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">d</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">records</span>.<span class="ruby-identifier">any?</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">r</span><span class="ruby-operator">|</span> <span class="ruby-identifier">r</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">d</span>[<span class="ruby-value">0</span>] }
+        <span class="ruby-comment"># オリジンのPriorityは変更不可</span>
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">d</span>[<span class="ruby-value">2</span>] <span class="ruby-operator">==</span> <span class="ruby-constant">ORIGIN</span>
+          <span class="ruby-identifier">records</span>.<span class="ruby-identifier">each</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">r</span><span class="ruby-operator">|</span> <span class="ruby-identifier">r</span>[<span class="ruby-value">2</span>] = <span class="ruby-constant">ORIGIN</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">r</span>[<span class="ruby-value">0</span>] <span class="ruby-operator">==</span> <span class="ruby-identifier">d</span>[<span class="ruby-value">0</span>] }
+        <span class="ruby-keyword">end</span>
+
+        <span class="ruby-keyword">true</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-comment"># データを更新</span>
+    <span class="ruby-identifier">records</span> = <span class="ruby-identifier">records</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">r</span><span class="ruby-operator">|</span> <span class="ruby-identifier">r</span> <span class="ruby-operator">+</span> [<span class="ruby-constant">ACTIVE</span>] }
+    <span class="ruby-ivar">@gossip</span>.<span class="ruby-identifier">data</span>.<span class="ruby-identifier">concat</span>(<span class="ruby-identifier">records</span>)
+  <span class="ruby-keyword">end</span> <span class="ruby-comment"># transaction</span>
+
+  <span class="ruby-comment"># データベースを更新</span>
+  <span class="ruby-identifier">update</span>(<span class="ruby-ivar">@address</span>, <span class="ruby-identifier">records</span>, <span class="ruby-keyword">true</span>)
+
+  <span class="ruby-comment"># ヘルスチェックがあれば開始</span>
+  <span class="ruby-identifier">records</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">first</span> }.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">checker</span> = <span class="ruby-ivar">@health_checkers</span>[<span class="ruby-identifier">name</span>]
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">checker</span> <span class="ruby-keyword">and</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">checker</span>.<span class="ruby-identifier">alive?</span>
+      <span class="ruby-identifier">checker</span>.<span class="ruby-identifier">start</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> [<span class="ruby-operator">!</span><span class="ruby-identifier">errmsg</span>, <span class="ruby-identifier">errmsg</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- add_or_rplace_records-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- add_or_rplace_records-method -->
+
+    
+      <div id="method-i-address_exist-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">address_exist?</span><span
+            class="method-args">(name)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Search of records</p>
+          
+
+          
+          <div class="method-source-code" id="address_exist-3F-source">
+            <pre><span class="ruby-comment"># File lib/srv/murakumo_cloud.rb, line 328</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier">address_exist?</span>(<span class="ruby-identifier">name</span>)
+      <span class="ruby-comment"># 名前は小文字に変換</span>
+      <span class="ruby-identifier">name</span> = <span class="ruby-identifier">name</span>.<span class="ruby-identifier">downcase</span>
+
+      <span class="ruby-comment"># シングルスレッドェ…</span>
+      <span class="ruby-ivar">@address_records</span> = <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">execute</span>(<span class="ruby-string">&quot;        SELECT ip_address, ttl, priority FROM records
+        WHERE name = ? AND activity = ?
+&quot;</span>, <span class="ruby-identifier">name</span>, <span class="ruby-constant">ACTIVE</span>)
+
+      <span class="ruby-ivar">@address_records</span>.<span class="ruby-identifier">length</span>.<span class="ruby-identifier">nonzero?</span>
+    <span class="ruby-keyword">end</span></pre>
+          </div><!-- address_exist-3F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- address_exist-3F-method -->
+
+    
+      <div id="method-i-close" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">close</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="close-source">
+            <pre><span class="ruby-comment"># File lib/srv/murakumo_cloud.rb, line 280</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">close</span>
+  <span class="ruby-comment"># データベースをクローズ</span>
+  <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">close</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- close-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- close-method -->
+
+    
+      <div id="method-i-delete" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">delete</span><span
+            class="method-args">(address)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="delete-source">
+            <pre><span class="ruby-comment"># File lib/srv/murakumo_cloud.rb, line 313</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">delete</span>(<span class="ruby-identifier">address</span>)
+  <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">execute</span>(<span class="ruby-string">'DELETE FROM records WHERE ip_address = ?'</span>, <span class="ruby-identifier">address</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- delete-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- delete-method -->
+
+    
+      <div id="method-i-delete_by_names" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">delete_by_names</span><span
+            class="method-args">(address, names)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="delete_by_names-source">
+            <pre><span class="ruby-comment"># File lib/srv/murakumo_cloud.rb, line 317</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier">delete_by_names</span>(<span class="ruby-identifier">address</span>, <span class="ruby-identifier">names</span>)
+      <span class="ruby-identifier">names</span> = <span class="ruby-identifier">names</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot;'#{i.downcase}'&quot;</span> }.<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>)
+
+      <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">execute</span>(<span class="ruby-string">&quot;        DELETE FROM records
+        WHERE ip_address = ? AND name IN (#{names})
+&quot;</span>, <span class="ruby-identifier">address</span>)
+    <span class="ruby-keyword">end</span></pre>
+          </div><!-- delete_by_names-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- delete_by_names-method -->
+
+    
+      <div id="method-i-delete_nodes" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">delete_nodes</span><span
+            class="method-args">(nodes)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="delete_nodes-source">
+            <pre><span class="ruby-comment"># File lib/srv/murakumo_cloud.rb, line 238</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">delete_nodes</span>(<span class="ruby-identifier">nodes</span>)
+  <span class="ruby-identifier">errmsg</span> = <span class="ruby-keyword">nil</span>
+
+  <span class="ruby-identifier">nodes</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+    <span class="ruby-ivar">@gossip</span>.<span class="ruby-identifier">delete_node</span>(<span class="ruby-identifier">i</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> [<span class="ruby-operator">!</span><span class="ruby-identifier">errmsg</span>, <span class="ruby-identifier">errmsg</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- delete_nodes-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- delete_nodes-method -->
+
+    
+      <div id="method-i-delete_records" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">delete_records</span><span
+            class="method-args">(names)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="delete_records-source">
+            <pre><span class="ruby-comment"># File lib/srv/murakumo_cloud.rb, line 194</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">delete_records</span>(<span class="ruby-identifier">names</span>)
+  <span class="ruby-identifier">errmsg</span> = <span class="ruby-keyword">nil</span>
+
+  <span class="ruby-comment"># 名前は小文字に変換</span>
+  <span class="ruby-identifier">names</span> = <span class="ruby-identifier">names</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">downcase</span> }
+
+  <span class="ruby-ivar">@gossip</span>.<span class="ruby-identifier">transaction</span> <span class="ruby-keyword">do</span>
+    <span class="ruby-comment"># データを削除</span>
+    <span class="ruby-ivar">@gossip</span>.<span class="ruby-identifier">data</span>.<span class="ruby-identifier">reject!</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">d</span><span class="ruby-operator">|</span>
+      <span class="ruby-keyword">if</span> <span class="ruby-identifier">names</span>.<span class="ruby-identifier">any?</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">d</span>[<span class="ruby-value">0</span>] }
+        <span class="ruby-keyword">if</span> <span class="ruby-identifier">d</span>[<span class="ruby-value">2</span>] <span class="ruby-operator">==</span> <span class="ruby-constant">ORIGIN</span>
+          <span class="ruby-comment"># オリジンは削除不可</span>
+          <span class="ruby-identifier">errmsg</span> = <span class="ruby-string">'original host name cannot be deleted'</span>
+          <span class="ruby-identifier">names</span>.<span class="ruby-identifier">reject!</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">n</span><span class="ruby-operator">|</span> <span class="ruby-identifier">n</span> <span class="ruby-operator">==</span> <span class="ruby-identifier">d</span>[<span class="ruby-value">0</span>] }
+          <span class="ruby-keyword">false</span>
+        <span class="ruby-keyword">else</span>
+          <span class="ruby-keyword">true</span>
+        <span class="ruby-keyword">end</span>
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span> <span class="ruby-comment"># transaction</span>
+
+  <span class="ruby-comment"># データベースを更新</span>
+  <span class="ruby-identifier">delete_by_names</span>(<span class="ruby-ivar">@address</span>, <span class="ruby-identifier">names</span>)
+
+  <span class="ruby-comment"># ヘルスチェックがあれば停止</span>
+  <span class="ruby-identifier">names</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">name</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">checker</span> = <span class="ruby-ivar">@health_checkers</span>[<span class="ruby-identifier">name</span>]
+    <span class="ruby-identifier">checker</span>.<span class="ruby-identifier">stop</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">checker</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> [<span class="ruby-operator">!</span><span class="ruby-identifier">errmsg</span>, <span class="ruby-identifier">errmsg</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- delete_records-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- delete_records-method -->
+
+    
+      <div id="method-i-get_attr" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">get_attr</span><span
+            class="method-args">(name)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="get_attr-source">
+            <pre><span class="ruby-comment"># File lib/srv/murakumo_cloud.rb, line 248</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">get_attr</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-constant">ATTRIBUTES</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">name</span>)
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-value">:log_level</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@gossip</span>.<span class="ruby-identifier">logger</span>
+      <span class="ruby-node">%W(debug info warn error fatal)</span>[<span class="ruby-ivar">@gossip</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">level</span>]
+    <span class="ruby-keyword">else</span>
+      <span class="ruby-keyword">nil</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">attr</span>, <span class="ruby-identifier">conv</span> = <span class="ruby-constant">ATTRIBUTES</span>[<span class="ruby-identifier">name</span>]
+    <span class="ruby-ivar">@gossip</span>.<span class="ruby-identifier">context</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">attr</span>).<span class="ruby-identifier">to_s</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- get_attr-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- get_attr-method -->
+
+    
+      <div id="method-i-list_records" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">list_records</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="list_records-source">
+            <pre><span class="ruby-comment"># File lib/srv/murakumo_cloud.rb, line 142</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier">list_records</span>
+      <span class="ruby-identifier">columns</span> = <span class="ruby-node">%W(ip_address name ttl priority activity)</span>
+
+      <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">execute</span>(<span class="ruby-string">&quot;        SELECT #{columns.join(', ')} FROM records ORDER BY ip_address, name
+&quot;</span>).<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">values_at</span>(*<span class="ruby-identifier">columns</span>) }
+    <span class="ruby-keyword">end</span></pre>
+          </div><!-- list_records-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- list_records-method -->
+
+    
+      <div id="method-i-lookup_addresses" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">lookup_addresses</span><span
+            class="method-args">(name)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="lookup_addresses-source">
+            <pre><span class="ruby-comment"># File lib/srv/murakumo_cloud.rb, line 341</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">lookup_addresses</span>(<span class="ruby-identifier">name</span>)
+  <span class="ruby-identifier">records</span> = <span class="ruby-keyword">nil</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@address_records</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+    <span class="ruby-comment"># レコードが一件ならそれを返す</span>
+    <span class="ruby-identifier">records</span> = <span class="ruby-ivar">@address_records</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-comment"># 優先度の高いレコードを検索</span>
+    <span class="ruby-identifier">records</span> = <span class="ruby-ivar">@address_records</span>.<span class="ruby-identifier">select</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span>[<span class="ruby-string">'priority'</span>] <span class="ruby-operator">==</span> <span class="ruby-constant">MASTER</span> }
+
+    <span class="ruby-comment"># レコードが見つからなかった場合は優先度の低いレコードを選択</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">records</span>.<span class="ruby-identifier">empty?</span>
+      <span class="ruby-identifier">records</span> = <span class="ruby-ivar">@address_records</span>.<span class="ruby-identifier">select</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span>[<span class="ruby-string">'priority'</span>] <span class="ruby-operator">==</span> <span class="ruby-constant">BACKUP</span> }
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-comment"># それでもレコードが見つからなかった場合はオリジンを選択</span>
+    <span class="ruby-comment"># ※このパスは通らない</span>
+    <span class="ruby-identifier">records</span> = <span class="ruby-ivar">@address_records</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">records</span>.<span class="ruby-identifier">empty?</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># IPアドレス、TTLを返す</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">records</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span>.<span class="ruby-identifier">values_at</span>(<span class="ruby-string">'ip_address'</span>, <span class="ruby-string">'ttl'</span>) }
+<span class="ruby-keyword">ensure</span>
+  <span class="ruby-comment"># エラー検出のため、一応クリア</span>
+  <span class="ruby-ivar">@address_records</span> = <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- lookup_addresses-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- lookup_addresses-method -->
+
+    
+      <div id="method-i-lookup_name" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">lookup_name</span><span
+            class="method-args">(address)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="lookup_name-source">
+            <pre><span class="ruby-comment"># File lib/srv/murakumo_cloud.rb, line 380</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">lookup_name</span>(<span class="ruby-identifier">address</span>)
+  <span class="ruby-identifier">record</span> = <span class="ruby-keyword">nil</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@name_records</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">==</span> <span class="ruby-value">1</span>
+    <span class="ruby-comment"># レコードが一件ならそれを返す</span>
+    <span class="ruby-identifier">record</span> = <span class="ruby-ivar">@name_records</span>.<span class="ruby-identifier">first</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-comment"># オリジンを検索</span>
+    <span class="ruby-identifier">record</span> = <span class="ruby-ivar">@name_records</span>.<span class="ruby-identifier">find</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span>[<span class="ruby-string">'priority'</span>] <span class="ruby-operator">==</span> <span class="ruby-constant">ORIGIN</span> }
+
+    <span class="ruby-comment"># レコードが見つからなかった場合は優先度の高いレコード選択</span>
+    <span class="ruby-keyword">unless</span> <span class="ruby-identifier">record</span>
+      <span class="ruby-identifier">record</span> = <span class="ruby-ivar">@name_records</span>.<span class="ruby-identifier">find</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-identifier">i</span>[<span class="ruby-string">'priority'</span>] <span class="ruby-operator">==</span> <span class="ruby-constant">ACTIVE</span> }
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-comment"># それでもレコードが見つからなかった場合は優先度の低いレコードを選択</span>
+    <span class="ruby-identifier">record</span> = <span class="ruby-ivar">@name_records</span>.<span class="ruby-identifier">first</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">record</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># ホスト名、TTLを返す</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">record</span>.<span class="ruby-identifier">values_at</span>(<span class="ruby-string">'name'</span>, <span class="ruby-string">'ttl'</span>)
+<span class="ruby-keyword">ensure</span>
+  <span class="ruby-comment"># エラー検出のため、一応クリア</span>
+  <span class="ruby-ivar">@name_records</span> = <span class="ruby-keyword">nil</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- lookup_name-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- lookup_name-method -->
+
+    
+      <div id="method-i-name_exist-3F" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">name_exist?</span><span
+            class="method-args">(address)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="name_exist-3F-source">
+            <pre><span class="ruby-comment"># File lib/srv/murakumo_cloud.rb, line 368</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier">name_exist?</span>(<span class="ruby-identifier">address</span>)
+      <span class="ruby-identifier">address</span> = <span class="ruby-identifier">x_ip_addr</span>(<span class="ruby-identifier">address</span>)
+
+      <span class="ruby-comment"># シングルスレッドェ…</span>
+      <span class="ruby-ivar">@name_records</span> = <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">execute</span>(<span class="ruby-string">&quot;        SELECT name, ttl, priority FROM records
+        WHERE ip_address = ? AND activity = ?
+&quot;</span>, <span class="ruby-identifier">address</span>, <span class="ruby-constant">ACTIVE</span>)
+
+      <span class="ruby-ivar">@name_records</span>.<span class="ruby-identifier">length</span>.<span class="ruby-identifier">nonzero?</span>
+    <span class="ruby-keyword">end</span></pre>
+          </div><!-- name_exist-3F-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- name_exist-3F-method -->
+
+    
+      <div id="method-i-set_attr" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">set_attr</span><span
+            class="method-args">(name, value)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="set_attr-source">
+            <pre><span class="ruby-comment"># File lib/srv/murakumo_cloud.rb, line 263</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">set_attr</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">value</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-constant">ATTRIBUTES</span>.<span class="ruby-identifier">has_key?</span>(<span class="ruby-identifier">name</span>)
+
+  <span class="ruby-identifier">errmsg</span> = <span class="ruby-keyword">nil</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">name</span> <span class="ruby-operator">==</span> <span class="ruby-value">:log_level</span>
+    <span class="ruby-keyword">if</span> <span class="ruby-ivar">@gossip</span>.<span class="ruby-identifier">logger</span>
+      <span class="ruby-ivar">@gossip</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">level</span> = <span class="ruby-node">%W(debug info warn error fatal)</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">value</span>.<span class="ruby-identifier">to_s</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">else</span>
+    <span class="ruby-identifier">attr</span>, <span class="ruby-identifier">conv</span> = <span class="ruby-constant">ATTRIBUTES</span>[<span class="ruby-identifier">name</span>]
+    <span class="ruby-ivar">@gossip</span>.<span class="ruby-identifier">context</span>.<span class="ruby-identifier">send</span>(<span class="ruby-node">&quot;#{attr}=&quot;</span>, <span class="ruby-identifier">value</span>.<span class="ruby-identifier">send</span>(<span class="ruby-identifier">conv</span>)).<span class="ruby-identifier">to_s</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> [<span class="ruby-operator">!</span><span class="ruby-identifier">errmsg</span>, <span class="ruby-identifier">errmsg</span>]
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- set_attr-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- set_attr-method -->
+
+    
+      <div id="method-i-to_hash" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">to_hash</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="to_hash-source">
+            <pre><span class="ruby-comment"># File lib/srv/murakumo_cloud.rb, line 82</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">to_hash</span>
+  <span class="ruby-identifier">keys</span> = {
+    <span class="ruby-value">:auth_key</span>      =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'auth-key'</span>,
+    <span class="ruby-value">:dns_address</span>   =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'address'</span>,
+    <span class="ruby-value">:dns_port</span>      =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'port'</span>,
+    <span class="ruby-value">:initial_nodes</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">lambda</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">v</span><span class="ruby-operator">|</span> [<span class="ruby-string">'initial-nodes'</span>, <span class="ruby-identifier">v</span>.<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>)] },
+    <span class="ruby-value">:resolver</span>      =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">lambda</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">v</span><span class="ruby-operator">|</span> [
+      <span class="ruby-string">'resolver'</span>,
+      <span class="ruby-identifier">v</span>.<span class="ruby-identifier">instance_variable_get</span>(<span class="ruby-value">:@config</span>).<span class="ruby-identifier">instance_variable_get</span>(<span class="ruby-value">:@config_info</span>)[<span class="ruby-value">:nameserver</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>)
+    ]},
+    <span class="ruby-value">:socket</span>        =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'socket'</span>,
+    <span class="ruby-value">:max_ip_num</span>    =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'max-ip-num'</span>,
+    <span class="ruby-value">:log_path</span>      =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'log-path'</span>,
+    <span class="ruby-value">:log_level</span>     =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'log-level'</span>,
+    <span class="ruby-value">:gossip_port</span>   =<span class="ruby-operator">&gt;</span> <span class="ruby-string">'gossip-port'</span>,
+    <span class="ruby-value">:gossip_node_lifetime</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">lambda</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">v</span><span class="ruby-operator">|</span> [
+      <span class="ruby-string">'gossip-node-lifetime'</span>,
+      <span class="ruby-ivar">@gossip</span>.<span class="ruby-identifier">context</span>.<span class="ruby-identifier">node_lifetime</span>
+    ]},
+    <span class="ruby-value">:gossip_send_interval</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">lambda</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">v</span><span class="ruby-operator">|</span> [
+      <span class="ruby-string">'gossip-send-interval'</span>,
+      <span class="ruby-ivar">@gossip</span>.<span class="ruby-identifier">context</span>.<span class="ruby-identifier">gossip_interval</span>
+    ]},
+    <span class="ruby-value">:gossip_receive_timeout</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">lambda</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">v</span><span class="ruby-operator">|</span> [
+      <span class="ruby-string">'gossip-receive-timeout'</span>,
+      <span class="ruby-ivar">@gossip</span>.<span class="ruby-identifier">context</span>.<span class="ruby-identifier">receive_timeout</span>
+    ]},
+  }
+
+  <span class="ruby-identifier">hash</span> = {}
+
+  <span class="ruby-identifier">keys</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">k</span>, <span class="ruby-identifier">name</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">value</span> = <span class="ruby-ivar">@options</span>[<span class="ruby-identifier">k</span>]
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">value</span> <span class="ruby-keyword">and</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">respond_to?</span>(<span class="ruby-value">:call</span>)
+      <span class="ruby-identifier">name</span>, <span class="ruby-identifier">value</span> = <span class="ruby-identifier">name</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">value</span>)
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-keyword">if</span> <span class="ruby-identifier">value</span> <span class="ruby-keyword">and</span> (<span class="ruby-keyword">not</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">kind_of?</span>(<span class="ruby-constant">String</span>) <span class="ruby-keyword">or</span> <span class="ruby-keyword">not</span> <span class="ruby-identifier">value</span>.<span class="ruby-identifier">empty?</span>)
+      <span class="ruby-identifier">hash</span>[<span class="ruby-identifier">name</span>] = <span class="ruby-identifier">value</span>
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">records</span> = <span class="ruby-identifier">list_records</span>
+
+  <span class="ruby-identifier">hash</span>[<span class="ruby-string">'host'</span>] = <span class="ruby-identifier">records</span>.<span class="ruby-identifier">find</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">r</span><span class="ruby-operator">|</span> <span class="ruby-identifier">r</span>[<span class="ruby-value">3</span>] <span class="ruby-operator">==</span> <span class="ruby-constant">ORIGIN</span> }[<span class="ruby-value">0</span><span class="ruby-operator">..</span><span class="ruby-value">2</span>].<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>)
+
+  <span class="ruby-identifier">aliases</span> = <span class="ruby-identifier">records</span>.<span class="ruby-identifier">select</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">r</span><span class="ruby-operator">|</span> <span class="ruby-identifier">r</span>[<span class="ruby-value">3</span>] <span class="ruby-operator">!=</span> <span class="ruby-constant">ORIGIN</span> }.<span class="ruby-identifier">map</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">r</span><span class="ruby-operator">|</span>
+    [<span class="ruby-identifier">r</span>[<span class="ruby-value">1</span>], <span class="ruby-identifier">r</span>[<span class="ruby-value">2</span>], (<span class="ruby-identifier">r</span>[<span class="ruby-value">3</span>] <span class="ruby-operator">==</span> <span class="ruby-constant">MASTER</span> <span class="ruby-operator">?</span> <span class="ruby-string">'master'</span> <span class="ruby-operator">:</span> <span class="ruby-string">'backup'</span>)].<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>)
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-identifier">hash</span>[<span class="ruby-string">'alias'</span>] = <span class="ruby-identifier">aliases</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">aliases</span>.<span class="ruby-identifier">empty?</span>
+
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">config_file</span> <span class="ruby-keyword">and</span> <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">config_file</span>[<span class="ruby-string">'health-check'</span>]
+    <span class="ruby-identifier">hash</span>[<span class="ruby-string">'health-check'</span>] = <span class="ruby-ivar">@options</span>.<span class="ruby-identifier">config_file</span>[<span class="ruby-string">'health-check'</span>]
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">hash</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- to_hash-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- to_hash-method -->
+
+    
+      <div id="method-i-update" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">update</span><span
+            class="method-args">(address, datas, update_only = false)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Operation of storage</p>
+          
+
+          
+          <div class="method-source-code" id="update-source">
+            <pre><span class="ruby-comment"># File lib/srv/murakumo_cloud.rb, line 287</span>
+    <span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>(<span class="ruby-identifier">address</span>, <span class="ruby-identifier">datas</span>, <span class="ruby-identifier">update_only</span> = <span class="ruby-keyword">false</span>)
+      <span class="ruby-keyword">return</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">datas</span>
+
+      <span class="ruby-identifier">datas</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+        <span class="ruby-identifier">name</span>, <span class="ruby-identifier">ttl</span>, <span class="ruby-identifier">priority</span>, <span class="ruby-identifier">activity</span> = <span class="ruby-identifier">i</span>
+
+        <span class="ruby-comment"># 名前は小文字に変換</span>
+        <span class="ruby-identifier">name</span> = <span class="ruby-identifier">name</span>.<span class="ruby-identifier">downcase</span>
+
+        <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">execute</span>(<span class="ruby-string">&quot;          REPLACE INTO records (ip_address, name, ttl, priority, activity)
+          VALUES (?, ?, ?, ?, ?)
+&quot;</span>, <span class="ruby-identifier">address</span>, <span class="ruby-identifier">name</span>, <span class="ruby-identifier">ttl</span>, <span class="ruby-identifier">priority</span>, <span class="ruby-identifier">activity</span>)
+      <span class="ruby-keyword">end</span>
+
+      <span class="ruby-comment"># データにないレコードは消す</span>
+      <span class="ruby-keyword">unless</span> <span class="ruby-identifier">update_only</span>
+        <span class="ruby-identifier">names</span> = <span class="ruby-identifier">datas</span>.<span class="ruby-identifier">map</span> {<span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span> <span class="ruby-node">&quot;'#{i.first.downcase}'&quot;</span> }.<span class="ruby-identifier">join</span>(<span class="ruby-string">','</span>)
+
+        <span class="ruby-ivar">@db</span>.<span class="ruby-identifier">execute</span>(<span class="ruby-string">&quot;          DELETE FROM records
+          WHERE ip_address = ? AND name NOT IN (#{names})
+&quot;</span>, <span class="ruby-identifier">address</span>)
+      <span class="ruby-keyword">end</span>
+    <span class="ruby-keyword">end</span></pre>
+          </div><!-- update-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- update-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.11.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
